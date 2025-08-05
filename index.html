@@ -5,20 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Myfolio | Marco Romero</title>
   <link rel="stylesheet" href="2style/style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="logo">Myfolio</div>
-    <ul class="nav-links">
-      <li><a href="#">About me</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Blog</a></li>
-    </ul>
+    <div class="nav-links">
+      <button onclick="document.getElementById('about').scrollIntoView()">About Me</button>
+      <button onclick="document.getElementById('skills').scrollIntoView()">Skills</button>
+      <button onclick="document.getElementById('projects').scrollIntoView()">Projects</button>
+    </div>
     <button class="btn-contact">Contact Me</button>
   </nav>
 
-  <section class="hero">
+  <!-- Hero Section -->
+  <section class="hero" id="about">
     <div class="hero-text">
       <h1><span class="highlight">Digital designer</span><br>crafting product that people <strong>love</strong></h1>
       <p>I’m Marco Romero — a designer who works with startups to push creative boundaries and create unique user experiences.</p>
@@ -29,32 +35,34 @@
     </div>
   </section>
 
-  <section class="logos">
-    <p>TRUSTED BY INDUSTRY LEADERS</p>
+  <!-- Skills Section -->
+  <section class="logos" id="skills">
+    <p><strong>SKILLS</strong></p>
     <div class="logo-strip">
-      <span>🔴 Octopus</span>
-      <span>🔴 Dualalix</span>
-      <span>🔴 Poppers</span>
-      <span>🔴 Mayabi</span>
-      <span>🔴 Pritom</span>
+      <span>🔴 HTML & CSS</span>
+      <span>🔴 JavaScript</span>
+      <span>🔴 Git & GitHub</span>
+      <span>🔴 Responsive Design</span>
+      <span>🔴 UI/UX Principles</span>
     </div>
   </section>
 
-  <section class="services">
-    <h2>Services <span class="highlight">I believe in</span></h2>
-    <p class="services-sub">Hi! I’m Marco, a product designer based in Manila. I create user-friendly interfaces for fast-growing startups.</p>
+  <!-- Projects Section -->
+  <section class="services" id="projects">
+    <h2>Projects <span class="highlight">I’ve Built</span></h2>
+    <p class="services-sub">Here are some of the personal and client projects I’ve worked on recently.</p>
     <div class="service-cards">
       <div class="card">
-        <h3>🎨 Website Design</h3>
-        <p>Build visually appealing and responsive websites tailored to your brand identity.</p>
+        <h3>🎨 Portfolio Website</h3>
+        <p>A clean and modern portfolio website to showcase skills and resume.</p>
       </div>
       <div class="card">
-        <h3>📈 SEO Marketing</h3>
-        <p>Improve visibility through strategic SEO practices and content-driven design.</p>
+        <h3>📈 Analytics Dashboard</h3>
+        <p>Data dashboard with interactive charts for a marketing agency.</p>
       </div>
       <div class="card">
-        <h3>🧱 Frontend Dev</h3>
-        <p>Turn designs into code using modern frontend frameworks for smooth performance.</p>
+        <h3>🧱 Blog Platform</h3>
+        <p>Personal blog engine with Markdown support and CMS backend.</p>
       </div>
     </div>
   </section>
