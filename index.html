@@ -3,52 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Marco Romero | Portfolio</title>
+  <title>Myfolio | Marco Romero</title>
   <link rel="stylesheet" href="style/style.css" />
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="https://via.placeholder.com/150" alt="Profile Photo" class="profile-img" />
-      <h1>Marco Romero</h1>
-      <p class="subtitle">Aspiring Web Developer & Machine Learning Enthusiast</p>
-    </header>
+  <nav class="navbar">
+    <div class="logo">Myfolio</div>
+    <ul class="nav-links">
+      <li><a href="#">About me</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <button class="btn-contact">Contact Me</button>
+  </nav>
 
-    <main>
-      <section class="card">
-        <h2>About Me</h2>
-        <p>I’m a student passionate about building interactive web experiences and applying AI to solve real-world problems. I enjoy combining creative design with technical problem-solving.</p>
-      </section>
+  <section class="hero">
+    <div class="hero-text">
+      <h1><span class="highlight">Digital designer</span><br>crafting product that people <strong>love</strong></h1>
+      <p>I’m Marco Romero — a designer who works with startups to push creative boundaries and create unique user experiences.</p>
+      <button class="cta-button">Book a FREE Call →</button>
+    </div>
+    <div class="hero-image">
+      <img src="https://via.placeholder.com/300x400" alt="Profile Photo" />
+    </div>
+  </section>
 
-      <section class="card">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-          <li>HTML & CSS</li>
-          <li>JavaScript (Vanilla & DOM)</li>
-          <li>Python (Flask, Pandas, scikit-learn)</li>
-          <li>Machine Learning</li>
-          <li>Git & GitHub</li>
-        </ul>
-      </section>
+  <section class="logos">
+    <p>TRUSTED BY INDUSTRY LEADERS</p>
+    <div class="logo-strip">
+      <span>🔴 Octopus</span>
+      <span>🔴 Dualalix</span>
+      <span>🔴 Poppers</span>
+      <span>🔴 Mayabi</span>
+      <span>🔴 Pritom</span>
+    </div>
+  </section>
 
-      <section class="card">
-        <h2>Projects</h2>
-        <ul>
-          <li><a href="#">🎓 PCOS Classification with AI (Thesis)</a></li>
-          <li><a href="#">🌐 Interactive Portfolio Website</a></li>
-          <li><a href="#">🤖 Python Chatbot with Flask</a></li>
-        </ul>
-      </section>
+  <section class="services">
+    <h2>Services <span class="highlight">I believe in</span></h2>
+    <p class="services-sub">Hi! I’m Marco, a product designer based in Manila. I create user-friendly interfaces for fast-growing startups.</p>
+    <div class="service-cards">
+      <div class="card">
+        <h3>🎨 Website Design</h3>
+        <p>Build visually appealing and responsive websites tailored to your brand identity.</p>
+      </div>
+      <div class="card">
+        <h3>📈 SEO Marketing</h3>
+        <p>Improve visibility through strategic SEO practices and content-driven design.</p>
+      </div>
+      <div class="card">
+        <h3>🧱 Frontend Dev</h3>
+        <p>Turn designs into code using modern frontend frameworks for smooth performance.</p>
+      </div>
+    </div>
+  </section>
 
-      <section class="card contact">
-        <h2>Contact</h2>
-        <p>📧 <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-      </section>
-    </main>
-
-    <footer>
-      <p>© 2025 Marco Romero. All rights reserved.</p>
-    </footer>
-  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
