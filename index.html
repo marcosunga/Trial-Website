@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Myfolio | Marco Romero</title>
+  <title>Myfolio | Marco R. Sunga</title>
   <link rel="stylesheet" href="2style/style.css" />
   <style>
     html {
@@ -20,55 +20,169 @@
       <button onclick="document.getElementById('skills').scrollIntoView()">Skills</button>
       <button onclick="document.getElementById('projects').scrollIntoView()">Projects</button>
     </div>
-    <button class="btn-contact">Contact Me</button>
+    <button class="btn-contact" onclick="document.getElementById('contact').scrollIntoView()">Contact Me Here↓</button>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" id="about">
-    <div class="hero-text">
-      <h1><span class="highlight">Digital designer</span><br>crafting product that people <strong>love</strong></h1>
-      <p>I’m Marco Romero — a designer who works with startups to push creative boundaries and create unique user experiences.</p>
-      <button class="cta-button">Book a FREE Call →</button>
+  <section class="hero" id="home" style="display: flex; align-items: center; justify-content: space-between; padding: 50px; background: #fff;">
+    <div class="hero-text" style="max-width: 600px;">
+      <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 10px;">
+        Hi There, <br>
+        I'm <span style="color: #ff6600;">Marco R. Sunga</span>
+      </h1>
+      <p style="font-size: 1.5rem; margin-bottom: 20px;">
+        I am a <span style="color: #ff0000;">Data Scientist and Data Analyst</span>
+      </p>
+      <a href="#about" style="display: inline-block; padding: 12px 24px; background: #2f2ff0; color: white; border-radius: 25px; text-decoration: none; font-weight: bold;">
+        About Me ↓
+      </a>
     </div>
     <div class="hero-image">
-      <img src="https://via.placeholder.com/300x400" alt="Profile Photo" />
+      <img src="https://via.placeholder.com/300x400" alt="Profile Photo" style="border-radius: 15px;" />
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section class="logos" id="skills">
-    <p><strong>SKILLS</strong></p>
-    <div class="logo-strip">
-      <span>🔴 HTML & CSS</span>
-      <span>🔴 JavaScript</span>
-      <span>🔴 Git & GitHub</span>
-      <span>🔴 Responsive Design</span>
-      <span>🔴 UI/UX Principles</span>
+  <!-- About Me Section -->
+  <section id="about" style="padding: 50px; background: #f9f9f9;">
+  <h2>About Me</h2>
+  <p>
+    I am Marco R. Sunga, a Bachelor of Science in Data Science graduate with a background in statistical and business analysis, predictive modeling, database management systems, and data visualization.
+  </p>
+
+  <h3>Education</h3>
+  <ul>
+    <li>
+      <strong>Mapúa University – Makati</strong><br>
+      Bachelor’s Degree in Data Science<br>
+      <em> August 2023 – August 2026</em>
+    </li>
+    <li>
+      <strong>Emilio Aguinaldo College - Cavite</strong><br>
+      Senior High School: Humanities in Social Sciences<br>
+      <em> August 2021 – July 2023</em>
+    </li>
+  </ul>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" style="padding: 50px; background: #000; color: white;">
+  <h2 style="color: #b94b35;">Skills</h2>
+  <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+
+    <!-- Technical Skills -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3 style="color: white;">Technical Skills</h3>
+      <p> Data Analysis and Engineering (using Jupyter Notebook) <span style="float:right; color: #b94b35;">90%</span></p>
+      <div style="background: #333; height: 6px; border-radius: 3px;">
+        <div style="width: 90%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
+      </div>
+
+      <p> Data Visualization (using Tableau and PowerBI) <span style="float:right; color: #b94b35;">80%</span></p>
+      <div style="background: #333; height: 6px; border-radius: 3px;">
+        <div style="width: 80%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
+      </div>
+
+      <p> Database Management System (MySQL and Oracle) <span style="float:right; color: #b94b35;">85%</span></p>
+      <div style="background: #333; height: 6px; border-radius: 3px;">
+        <div style="width: 85%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
+      </div>
     </div>
-  </section>
-<section class="services" id="projects">
-  <h2>Projects <span class="highlight">I’ve Built</span></h2>
-  <p class="services-sub">Here are some of the personal and client projects I’ve worked on recently.</p>
-  <div class="service-cards">
-    <div class="card">
-      <h3>🎨 Portfolio Website</h3>
-      <p>A clean and modern portfolio website to showcase skills and resume.</p>
+
+    <!-- Programming Languages -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3 style="color: white;">Programming Languages</h3>
+      <p> Python <span style="float:right; color: #b94b35;">95%</span></p>
+      <div style="background: #333; height: 6px; border-radius: 3px;">
+        <div style="width: 95%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
+      </div>
+
+      <p> HTML, CSS, and JavaScript <span style="float:right; color: #b94b35;">70%</span></p>
+      <div style="background: #333; height: 6px; border-radius: 3px;">
+        <div style="width: 70%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
+      </div>
+
+      <p> C++ <span style="float:right; color: #b94b35;">80%</span></p>
+      <div style="background: #333; height: 6px; border-radius: 3px;">
+        <div style="width: 80%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
+      </div>
     </div>
-    <div class="card">
-      <h3>📈 Analytics Dashboard</h3>
-      <p>Data dashboard with interactive charts for a marketing agency.</p>
+
+    <!-- Soft Skills -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3 style="color: white;">Soft Skills</h3>
+      <p>  <span style="float:right; color: #b94b35;">80%</span></p>
+      <div style="background: #333; height: 6px; border-radius: 3px;">
+        <div style="width: 80%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
+      </div>
+
+      <p> Communication Skill <span style="float:right; color: #b94b35;">95%</span></p>
+      <div style="background: #333; height: 6px; border-radius: 3px;">
+        <div style="width: 95%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
+      </div>
+
+      <p> Leadership <span style="float:right; color: #b94b35;">80%</span></p>
+      <div style="background: #333; height: 6px; border-radius: 3px;">
+        <div style="width: 80%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
+      </div>
     </div>
-    <div class="card">
-      <h3>🧱 Blog Platform</h3>
-      <p>Personal blog engine with Markdown support and CMS backend.</p>
-    </div>
-    <div class="card">
-      <h3>🤖 Salary Predictor 2020</h3>
-      <p>Machine learning app predicting software engineer salaries using Stack Overflow 2020 data.</p>
-      <a href="https://salarypredictor2020.streamlit.app/" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Project →</a>
+
+      <p> Collaboration Skill <span style="float:right; color: #b94b35;">90%</span></p>
+      <div style="background: #333; height: 6px; border-radius: 3px;">
+        <div style="width: 90%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
+      </div>
     </div>
   </div>
 </section>
+
+  <!-- Projects Section -->
+  <section class="services" id="projects">
+    <h2>Projects <span class="highlight">I’ve Built</span></h2>
+    <p class="services-sub">Here are some of the personal and client projects I’ve worked on recently.</p>
+    <div class="service-cards">
+      <div class="card">
+        <h3>🤖 Salary Predictor 2020</h3>
+        <p>Machine learning app predicting software engineer salaries using Stack Overflow 2020 data.</p>
+        <a href="https://salarypredictor2020.streamlit.app/" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+<!-- Contact Button (Triggers Popup) -->
+<button onclick="document.getElementById('contactModal').style.display='flex'"
+        style="padding: 10px 20px; background: #ff6600; color: white; border: none; cursor: pointer; border-radius: 5px;">
+  Contact Me
+</button>
+
+<!-- Contact Modal -->
+<div id="contactModal" 
+     style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); 
+            justify-content:center; align-items:center; z-index: 999;">
+  
+  <div style="background:#000; color:white; padding:30px; border-radius:10px; max-width:500px; width:90%; position:relative;">
+    <!-- Close Button -->
+    <span onclick="document.getElementById('contactModal').style.display='none'"
+          style="position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer; color:#ff6600;">
+      ✖
+    </span>
+    
+    <h2 style="color:#ff6600;">Contact Me</h2>
+    <p style="font-size:1.1rem; margin-bottom:20px;">
+      Whether you have a project in mind or just want to say hello, feel free to reach out!
+    </p>
+    
+    <p><strong>Email:</strong> <a href="marco.rsunga@gmail.com" style="color:#ff6600;">marco.rsunga@gmail.com</a></p>
+    <p><strong>Phone:</strong> <span style="color:#ff6600;">+xx xxx xxxx</span></p>
+    <p><strong>Address:</strong> Cavite, Philippines</p>
+    <p><strong>Website:</strong> <a href="https://marcosunga.github.io/Trial-Website/" target="_blank" style="color:#ff6600;">https://marcosunga.github.io/Trial-Website/</a></p>
+    
+    <!-- Social Links -->
+    <div style="margin-top:20px; display:flex; gap:15px; font-size:1.5rem;">
+      <a href="https://linkedin.com" target="_blank" style="color:#ff6600;">www.linkedin.com/in/marco-sunga-da20232026</a>
+      <a href="https://github.com" target="_blank" style="color:#ff6600;">https://github.com/marcosunga</a>
+    </div>
+  </div>
+</div>
+
 
   <script src="js/script.js"></script>
 </body>
