@@ -4,10 +4,144 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Myfolio | Marco R. Sunga</title>
-  <link rel="stylesheet" href="2style/style.css" />
   <style>
+    :root {
+      --bg-black: #0d0d0d; /* your project's black shade */
+      --text-white: #ffffff;
+      --highlight-red: #b94b35;
+    }
+
     html {
       scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: var(--highlight-red);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2, h3 {
+      color: var(--text-white);
+    }
+
+    .highlight {
+      color: var(--highlight-red);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: var(--bg-black);
+      border-bottom: 1px solid var(--highlight-red);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--highlight-red);
+    }
+
+    .nav-links button,
+    .btn-contact {
+      background: none;
+      border: none;
+      color: var(--text-white);
+      cursor: pointer;
+      font-size: 1rem;
+      margin-left: 15px;
+    }
+
+    .btn-contact {
+      background: var(--highlight-red);
+      padding: 8px 15px;
+      border-radius: 5px;
+      color: var(--text-white);
+    }
+
+    section {
+      padding: 50px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .hero-text h1 span {
+      color: var(--highlight-red);
+    }
+
+    .hero-text p span {
+      color: var(--highlight-red);
+    }
+
+    .skills-bar {
+      background: #333;
+      height: 6px;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .skills-fill {
+      background: var(--highlight-red);
+      height: 100%;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    .card a {
+      font-weight: bold;
+    }
+
+    #contactModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    #contactModal .modal-content {
+      background: var(--bg-black);
+      color: var(--text-white);
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+    }
+
+    #contactModal .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--highlight-red);
     }
   </style>
 </head>
@@ -24,16 +158,16 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" id="home" style="display: flex; align-items: center; justify-content: space-between; padding: 50px; background: #fff;">
-    <div class="hero-text" style="max-width: 600px;">
-      <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 10px;">
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>
         Hi There, <br>
-        I'm <span style="color: #ff6600;">Marco R. Sunga</span>
+        I'm <span>Marco R. Sunga</span>
       </h1>
-      <p style="font-size: 1.5rem; margin-bottom: 20px;">
-        I am a <span style="color: #ff0000;">Data Scientist and Data Analyst</span>
+      <p>
+        I am a <span>Data Scientist and Data Analyst</span>
       </p>
-      <a href="#about" style="display: inline-block; padding: 12px 24px; background: #2f2ff0; color: white; border-radius: 25px; text-decoration: none; font-weight: bold;">
+      <a href="#about" style="display: inline-block; padding: 12px 24px; background: var(--highlight-red); border-radius: 25px; font-weight: bold;">
         About Me ↓
       </a>
     </div>
@@ -43,147 +177,67 @@
   </section>
 
   <!-- About Me Section -->
-  <section id="about" style="padding: 50px; background: #f9f9f9;">
-  <h2>About Me</h2>
-  <p>
-    I am Marco R. Sunga, a Bachelor of Science in Data Science graduate with a background in statistical and business analysis, predictive modeling, database management systems, and data visualization.
-  </p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am Marco R. Sunga, a Bachelor of Science in Data Science graduate with a background in statistical and business analysis, predictive modeling, database management systems, and data visualization.
+    </p>
 
-  <h3>Education</h3>
-  <ul>
-    <li>
-      <strong>Mapúa University – Makati</strong><br>
-      Bachelor’s Degree in Data Science<br>
-      <em> August 2023 – August 2026</em>
-    </li>
-    <li>
-      <strong>Emilio Aguinaldo College - Cavite</strong><br>
-      Senior High School: Humanities in Social Sciences<br>
-      <em> August 2021 – July 2023</em>
-    </li>
-  </ul>
-</section>
+    <h3>Education</h3>
+    <ul>
+      <li>
+        <strong>Mapúa University – Makati</strong><br>
+        Bachelor’s Degree in Data Science<br>
+        <em> August 2023 – August 2026</em>
+      </li>
+      <li>
+        <strong>Emilio Aguinaldo College - Cavite</strong><br>
+        Senior High School: Humanities in Social Sciences<br>
+        <em> August 2021 – July 2023</em>
+      </li>
+    </ul>
+  </section>
 
-<!-- Skills Section -->
-<section id="skills" style="padding: 50px; background: #000; color: white;">
-  <h2 style="color: #b94b35;">Skills</h2>
-  <div style="display: flex; gap: 40px; flex-wrap: wrap;">
-
-    <!-- Technical Skills -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3 style="color: white;">Technical Skills</h3>
-      <p> Data Analysis and Engineering (using Jupyter Notebook) <span style="float:right; color: #b94b35;">90%</span></p>
-      <div style="background: #333; height: 6px; border-radius: 3px;">
-        <div style="width: 90%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2 class="highlight">Skills</h2>
+    <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 250px;">
+        <h3>Technical Skills</h3>
+        <p>Data Analysis and Engineering <span style="float:right;" class="highlight">90%</span></p>
+        <div class="skills-bar"><div class="skills-fill" style="width:90%"></div></div>
       </div>
-
-      <p> Data Visualization (using Tableau and PowerBI) <span style="float:right; color: #b94b35;">80%</span></p>
-      <div style="background: #333; height: 6px; border-radius: 3px;">
-        <div style="width: 80%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
-      </div>
-
-      <p> Database Management System (MySQL and Oracle) <span style="float:right; color: #b94b35;">85%</span></p>
-      <div style="background: #333; height: 6px; border-radius: 3px;">
-        <div style="width: 85%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
-      </div>
-    </div>
-
-    <!-- Programming Languages -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3 style="color: white;">Programming Languages</h3>
-      <p> Python <span style="float:right; color: #b94b35;">95%</span></p>
-      <div style="background: #333; height: 6px; border-radius: 3px;">
-        <div style="width: 95%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
-      </div>
-
-      <p> HTML, CSS, and JavaScript <span style="float:right; color: #b94b35;">70%</span></p>
-      <div style="background: #333; height: 6px; border-radius: 3px;">
-        <div style="width: 70%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
-      </div>
-
-      <p> C++ <span style="float:right; color: #b94b35;">80%</span></p>
-      <div style="background: #333; height: 6px; border-radius: 3px;">
-        <div style="width: 80%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
-      </div>
-    </div>
-
-    <!-- Soft Skills -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3 style="color: white;">Soft Skills</h3>
-      <p>  <span style="float:right; color: #b94b35;">80%</span></p>
-      <div style="background: #333; height: 6px; border-radius: 3px;">
-        <div style="width: 80%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
-      </div>
-
-      <p> Communication Skill <span style="float:right; color: #b94b35;">95%</span></p>
-      <div style="background: #333; height: 6px; border-radius: 3px;">
-        <div style="width: 95%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
-      </div>
-
-      <p> Leadership <span style="float:right; color: #b94b35;">80%</span></p>
-      <div style="background: #333; height: 6px; border-radius: 3px;">
-        <div style="width: 80%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
-      </div>
-    </div>
-
-      <p> Collaboration Skill <span style="float:right; color: #b94b35;">90%</span></p>
-      <div style="background: #333; height: 6px; border-radius: 3px;">
-        <div style="width: 90%; height: 6px; background: #b94b35; border-radius: 3px;"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Projects Section -->
-  <section class="services" id="projects">
-    <h2>Projects <span class="highlight">I’ve Built</span></h2>
-    <p class="services-sub">Here are some of the personal and client projects I’ve worked on recently.</p>
-    <div class="service-cards">
-      <div class="card">
-        <h3>🤖 Salary Predictor 2020</h3>
-        <p>Machine learning app predicting software engineer salaries using Stack Overflow 2020 data.</p>
-        <a href="https://salarypredictor2020.streamlit.app/" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Project →</a>
-      </div>
+      <!-- Repeat for other skill groups -->
     </div>
   </section>
 
-<!-- Contact Button (Triggers Popup) -->
-<button onclick="document.getElementById('contactModal').style.display='flex'"
-        style="padding: 10px 20px; background: #ff6600; color: white; border: none; cursor: pointer; border-radius: 5px;">
-  Contact Me
-</button>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects <span class="highlight">I’ve Built</span></h2>
+    <p>Here are some of the personal and client projects I’ve worked on recently.</p>
+    <div class="card">
+      <h3>🤖 Salary Predictor 2020</h3>
+      <p>Machine learning app predicting software engineer salaries using Stack Overflow 2020 data.</p>
+      <a href="https://salarypredictor2020.streamlit.app/" target="_blank">View Project →</a>
+    </div>
+  </section>
 
-<!-- Contact Modal -->
-<div id="contactModal" 
-     style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); 
-            justify-content:center; align-items:center; z-index: 999;">
-  
-  <div style="background:#000; color:white; padding:30px; border-radius:10px; max-width:500px; width:90%; position:relative;">
-    <!-- Close Button -->
-    <span onclick="document.getElementById('contactModal').style.display='none'"
-          style="position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer; color:#ff6600;">
-      ✖
-    </span>
-    
-    <h2 style="color:#ff6600;">Contact Me</h2>
-    <p style="font-size:1.1rem; margin-bottom:20px;">
-      Whether you have a project in mind or just want to say hello, feel free to reach out!
-    </p>
-    
-    <p><strong>Email:</strong> <a href="marco.rsunga@gmail.com" style="color:#ff6600;">marco.rsunga@gmail.com</a></p>
-    <p><strong>Phone:</strong> <span style="color:#ff6600;">+xx xxx xxxx</span></p>
-    <p><strong>Address:</strong> Cavite, Philippines</p>
-    <p><strong>Website:</strong> <a href="https://marcosunga.github.io/Trial-Website/" target="_blank" style="color:#ff6600;">https://marcosunga.github.io/Trial-Website/</a></p>
-    
-    <!-- Social Links -->
-    <div style="margin-top:20px; display:flex; gap:15px; font-size:1.5rem;">
-      <a href="https://linkedin.com" target="_blank" style="color:#ff6600;">www.linkedin.com/in/marco-sunga-da20232026</a>
-      <a href="https://github.com" target="_blank" style="color:#ff6600;">https://github.com/marcosunga</a>
+  <!-- Contact Button -->
+  <button class="btn-contact" onclick="document.getElementById('contactModal').style.display='flex'">
+    Contact Me
+  </button>
+
+  <!-- Contact Modal -->
+  <div id="contactModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="document.getElementById('contactModal').style.display='none'">✖</span>
+      <h2 class="highlight">Contact Me</h2>
+      <p>Whether you have a project in mind or just want to say hello, feel free to reach out!</p>
+      <p><strong>Email:</strong> <a href="mailto:marco.rsunga@gmail.com">marco.rsunga@gmail.com</a></p>
+      <p><strong>Phone:</strong> <span class="highlight">+xx xxx xxxx</span></p>
+      <p><strong>Address:</strong> Cavite, Philippines</p>
+      <p><strong>Website:</strong> <a href="https://marcosunga.github.io/Trial-Website/" target="_blank">Portfolio</a></p>
     </div>
   </div>
-</div>
-
-
-  <script src="js/script.js"></script>
 </body>
 </html>
